@@ -1,10 +1,10 @@
 ---
 - name: Install VLANs based on Hostname
   eos_vlan:
-    vlan_id={{item.vlan}}
-    name={{item.VlanDesc}}
-    connection={{inventory_hostname}}
-    state=present
+   vlan_id={{item.vlan}}
+   name={{item.VlanDesc}}
+   connection={{inventory_hostname}}
+   state=present
   when: inevntory_hostname == {{item.Hostname}}
   with_items: vlan_config
     
