@@ -5,6 +5,6 @@
    name={{item.VlanDesc}}
    connection={{inventory_hostname}}
    state=present
-  when: inevntory_hostname == {{item.Hostname}}
+  when: inventory_hostname == {{item.Hostname}}
   with_items: vlan_config
     
