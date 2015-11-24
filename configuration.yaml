@@ -4,6 +4,6 @@
    vlanid={{item.Vlan}}
    name={{item.VlanDesc}}
    connection={{inventory_hostname}}
-   state=absent
+   state=present
   when: inventory_hostname == {{item.Hostname}}
   with_items: vlan_config
