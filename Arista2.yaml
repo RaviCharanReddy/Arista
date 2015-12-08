@@ -18,7 +18,7 @@ vlan 160
    name Blue
 !
 interface Ethernet1
-   ip address 10.247.249.1/24
+   ip address 10.247.249.2/24
 !
 interface Ethernet2
 !
