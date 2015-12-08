@@ -1,0 +1,34 @@
+! Command: show startup-config
+! Startup-config last modified at  Tue Dec  8 19:57:12 2015 by admin
+! device: Arista3 (vEOS, EOS-4.13.8M)
+!
+! boot system flash:/vEOS.swi
+!
+transceiver qsfp default-mode 4x10G
+!
+hostname Arista3
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+username ansible secret 5 $1$Da9qvEgk$nOgFJOkoXz8x3LN002ZpW.
+!
+vlan 170
+   name Green
+!
+interface Ethernet1
+   ip address 10.247.249.3/24
+!
+interface Ethernet2
+!
+interface Management1
+   ip address 192.168.56.105/24
+!
+no ip routing
+!
+management api http-commands
+   no shutdown
+!
+!
+end
