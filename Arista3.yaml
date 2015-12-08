@@ -10,7 +10,7 @@ spanning-tree mode mstp
 !
 no aaa root
 !
-username ansible secret 5 $1$Da9qvEgk$nOgFJOkoXz8x3LN002ZpW.
+username ansible secret 5 $1$cD6/nZfs$43lrNNofj0.jfbmB5vdcu0
 !
 vlan 170
    name Green
