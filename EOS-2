@@ -1,0 +1,29 @@
+! device: VEOS-2 (vEOS, EOS-4.15.2.1F)
+!
+! boot system flash:/vEOS-lab.swi
+!
+transceiver qsfp default-mode 4x10G
+!
+hostname VEOS-2
+!
+spanning-tree mode mstp
+!
+aaa authorization exec default local
+!
+no aaa root
+!
+username ansible privilege 15 secret 5 $1$XQKA9P4K$PLWEs1Vhm7P5eNqTkpARl0
+!
+vlan 160
+   name Blue
+!
+interface Management1
+   ip address 192.168.56.107/24
+!
+no ip routing
+!
+management api http-commands
+   no shutdown
+!
+!
+end
