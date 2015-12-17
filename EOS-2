@@ -15,7 +15,7 @@ no aaa root
 username ansible privilege 15 secret 5 $1$XQKA9P4K$PLWEs1Vhm7P5eNqTkpARl0
 !
 vlan 160
-   name BLUE
+   name Red
 !
 interface Management1
    ip address 192.168.56.107/24
