@@ -1,0 +1,31 @@
+!
+hostname Arista3
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+username ansible secret 5 $1$cD6/nZfs$43lrNNofj0.jfbmB5vdcu0
+!
+vlan 170
+   name Green
+!
+interface Ethernet1
+   no switchport
+   ip address 192.168.20.2/24
+!
+interface Ethernet2
+   no switchpor
+!
+interface Management1
+   ip address 192.168.56.105/24
+!
+ip route 192.168.10.0/24 Ethernet1 192.168.20.1
+!
+ip routing
+!
+management api http-commands
+   no shutdown
+!
+!
+end
