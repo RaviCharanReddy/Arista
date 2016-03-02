@@ -10,7 +10,7 @@
   register: required_vlans
 
 - name: purge vlans not required
-   eos_purge: 
-    resource=eos_vlan 
-    results='{{ required_vlans|to_nice_json }}'
-    connection={{inventory_hostname}}
+  eos_purge: 
+   resource=eos_vlan 
+   results='{{ required_vlans|to_nice_json }}'
+   connection={{inventory_hostname}}
